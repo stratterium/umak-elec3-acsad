@@ -12,11 +12,11 @@ Group 5 | CPU target value: 50
 - Availability Zone: ap-southeast-1a
 
 ## Proof (Screenshots)
-1. **Activity History:**
+1. **Activity History:** Add a screenshot showing the Auto Scaling group's Activity history when the second instance launched.
 
    ![Activity History](activity-history.png)
 
-2. **CloudWatch Alarm (In alarm state):**
+2. **CloudWatch Alarm (In alarm state):** Add a screenshot of the target tracking alarm in the "In alarm" state.
 
    ![CloudWatch Alarm](cloudwatch-alarm.png)
 
