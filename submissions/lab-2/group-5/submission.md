@@ -4,8 +4,8 @@ Group 5 | CPU target value: 50
 
 ## Instance Tracking
 **First Instance**
-- Instance ID: <paste here>
-- Availability Zone: <paste here>
+- Instance ID: i-0e4b6ace834c49d4c
+- Availability Zone: ap-southeast-1b
 
 **Second Instance**
 - Instance ID: <paste here>
