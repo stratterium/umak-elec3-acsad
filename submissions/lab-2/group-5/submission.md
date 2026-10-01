@@ -8,8 +8,8 @@ Group 5 | CPU target value: 50
 - Availability Zone: ap-southeast-1b
 
 **Second Instance**
-- Instance ID: <paste here>
-- Availability Zone: <paste here>
+- Instance ID: i-0193cc0db975ea4d0
+- Availability Zone: ap-southeast-1a
 
 ## Proof (Screenshots)
 1. **Activity History:**
