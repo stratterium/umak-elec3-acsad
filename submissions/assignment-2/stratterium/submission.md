@@ -43,7 +43,7 @@ A /20 holds 2^12 = 4,096 addresses, but AWS reserves five in every subnet and ne
 
 What uses the missing address in the subnet with the lowest number?
 
-The lowest is ap-southeast-1a, at 4,090, one below the other two. That means one address beyond the five reserved ones is in use. Every address that a resource uses in a subnet is held by a network interface, the virtual network card of that resource, so one network interface currently exists in ap-southeast-1a. Since this is the default VPC, where EC2 instances are launched, the likeliest holder is an instance, although the subnet list alone does not say what it is.
+The lowest is ap-southeast-1a, at 4,090, one below the other two. The extra missing address is held by a network interface, the virtual network card of a resource. The EC2 Network Interfaces page shows exactly one interface in that subnet. It is attached to a running EC2 instance, and its private address, 172.31.37.42, falls inside the subnet's range of 172.31.32.0/20. So the count works out as 4,096 - 5 reserved - 1 in use = 4,090. The other two subnets have no interfaces, which is why they show the full 4,091.
 
 ### A4. The route table
 
@@ -58,7 +58,7 @@ The lowest is ap-southeast-1a, at 4,090, one below the other two. That means one
 
 Are the default subnets public or private? Which route proves it?
 
-Public. The route 0.0.0.0/0 has an internet gateway (igw-...) as its target, and that route is what makes a subnet public. The name of a subnet or the public IP of an instance does not decide it. The public IP only lets a particular instance use the path that the route provides, which is why our Lab 2 instances could be opened from a browser.
+Public. The route 0.0.0.0/0 has an internet gateway (igw-...) as its target, and that route is what makes a subnet public. The name of a subnet or the public IP of an instance does not decide it. The public IP only lets a particular instance use the path that the route provides, which is why our Lab 2 instances could be opened from a browser. The instance we found in A3 shows the difference: its network interface has no public IPv4 address, so even though it sits in a public subnet, it cannot be reached directly from the internet.
 
 ### A6. The internet gateway
 
