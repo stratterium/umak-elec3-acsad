@@ -97,7 +97,7 @@ A network ACL protects a whole subnet, while a security group protects one resou
 
 Inbound rule (type and source):
 
-All traffic, with the source being sg-0c5b6d4081cf0a534 / default, which is the default security group itself.
+All traffic, with the source being sg-..., which is the default security group itself.
 
 Which resources can send traffic to an instance that uses it?
 
